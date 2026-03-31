@@ -23,6 +23,7 @@ function parsePrizes(data) {
     numero: String(row.numero),
     descripcion: row['Descripción'] || row.Descripcion || '',
     palabraClave: row['Palabra clave'] || row['Palabra Clave'] || '',
+    imagen: row['Imagen'] || row.imagen || '',
   }))
 }
 
@@ -82,7 +83,7 @@ export default function App() {
   const soldCount = filteredNumbers.filter((n) => n.vendido).length
 
   return (
-    <div className="max-w-2xl mx-auto pb-8">
+    <div className="max-w-2xl mx-auto pb-8 min-h-screen">
       <Header prizes={prizes} />
       <Info total={filteredNumbers.length} sold={soldCount} />
       <VendorFilter vendors={vendors} active={activeVendor} onChange={setActiveVendor} />

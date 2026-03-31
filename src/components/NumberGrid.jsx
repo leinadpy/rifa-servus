@@ -13,7 +13,7 @@ export default function NumberGrid({ numbers, loading, error }) {
   if (loading && numbers.length === 0) {
     return (
       <div className="mx-4 mt-4 flex flex-col items-center justify-center py-16 gap-3">
-        <div className="w-8 h-8 border-4 border-green-500 border-t-transparent rounded-full animate-spin" />
+        <div className="w-8 h-8 border-4 border-indigo-500 border-t-transparent rounded-full animate-spin" />
         <p className="text-sm text-gray-500">Cargando números...</p>
       </div>
     )
@@ -23,10 +23,10 @@ export default function NumberGrid({ numbers, loading, error }) {
     <div className="mx-4 mt-4">
       <div
         className="
-          grid gap-2
+          grid gap-1.5
           grid-cols-5
-          sm:grid-cols-6
-          md:grid-cols-8
+          sm:grid-cols-8
+          md:grid-cols-10
           lg:grid-cols-10
         "
       >

@@ -10,7 +10,7 @@ export default function Info({ total, sold }) {
   const available = total - sold
 
   return (
-    <div className="bg-white mx-4 mt-4 rounded-2xl shadow-sm border border-gray-100 px-5 py-4">
+    <div className="bg-white/90 mx-4 mt-4 rounded-2xl shadow-sm border border-indigo-200/50 px-5 py-4">
       <div className="flex justify-between items-center">
         <div>
           <p className="text-xs text-gray-500 uppercase tracking-wide mb-0.5">Método de pago</p>
@@ -18,7 +18,7 @@ export default function Info({ total, sold }) {
         </div>
         <div className="text-right">
           <p className="text-xs text-gray-500 uppercase tracking-wide mb-0.5">Precio</p>
-          <p className="text-sm font-bold text-green-700">Gs. 10.000</p>
+          <p className="text-sm font-bold text-indigo-700">Gs. 10.000</p>
         </div>
       </div>
 
