@@ -1,6 +1,13 @@
 import { ORGANIZATION_NAME } from '../constants'
 import matherImg from '../assets/Mather.png'
 import servusImg from '../assets/Servus.png'
+import prize1 from '../assets/1- Sesion.jpeg'
+import prize2 from '../assets/2- Termo.webp'
+import prize3 from '../assets/3- Kit Cafetero.jpeg'
+import prize4 from '../assets/4- Purina.jpeg'
+import prize5 from '../assets/5- Sorpresa.jpg'
+
+const PRIZE_IMAGES = [prize1, prize2, prize3, prize4, prize5]
 
 export default function Header({ prizes }) {
   return (
@@ -28,22 +35,16 @@ export default function Header({ prizes }) {
 
       <div className="flex justify-center gap-3 flex-wrap">
         {prizes.length > 0
-          ? prizes.map((prize) => (
+          ? prizes.map((prize, i) => (
               <div
                 key={prize.numero}
                 className="w-20 rounded-xl border-2 border-white/50 shadow-md flex flex-col items-center overflow-hidden bg-white/90"
               >
-                {prize.imagen ? (
-                  <img
-                    src={prize.imagen}
-                    alt={prize.palabraClave}
-                    className="w-full h-16 object-cover"
-                  />
-                ) : (
-                  <div className="w-full h-16 bg-indigo-200 flex items-center justify-center">
-                    <span className="text-xl font-black text-indigo-900">{prize.numero}°</span>
-                  </div>
-                )}
+                <img
+                  src={PRIZE_IMAGES[i] ?? PRIZE_IMAGES[PRIZE_IMAGES.length - 1]}
+                  alt={prize.palabraClave}
+                  className="w-full h-16 object-cover"
+                />
                 <span className="text-[9px] text-indigo-400 font-medium mt-0.5">Foto referencia</span>
                 <span className="text-[10px] font-semibold text-indigo-900 text-center px-1 leading-tight pb-1">
                   {prize.palabraClave}

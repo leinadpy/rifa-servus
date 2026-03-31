@@ -14,7 +14,7 @@ export default function Info({ total, sold }) {
       <div className="flex justify-between items-center">
         <div>
           <p className="text-xs text-gray-500 uppercase tracking-wide mb-0.5">Método de pago</p>
-          <p className="text-sm font-semibold text-gray-800">Transferencia</p>
+          <p className="text-sm font-semibold text-gray-800">Efectivo/Transferencia</p>
         </div>
         <div className="text-right">
           <p className="text-xs text-gray-500 uppercase tracking-wide mb-0.5">Precio</p>

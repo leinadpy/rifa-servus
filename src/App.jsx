@@ -1,9 +1,10 @@
-import { useState, useEffect, useMemo } from 'react'
+import { useState, useEffect, useMemo, useRef } from 'react'
 import Header from './components/Header'
 import Info from './components/Info'
 import NumberGrid from './components/NumberGrid'
 import VendorFilter from './components/VendorFilter'
 import Footer from './components/Footer'
+import ScreenshotButton from './components/ScreenshotButton'
 import './index.css'
 
 const SHEET_ID = import.meta.env.VITE_SHEET_ID || 'YOUR_GOOGLE_SHEET_ID'
@@ -81,13 +82,17 @@ export default function App() {
   }, [numbers, activeVendor])
 
   const soldCount = filteredNumbers.filter((n) => n.vendido).length
+  const captureRef = useRef(null)
 
   return (
     <div className="max-w-2xl mx-auto pb-8 min-h-screen">
-      <Header prizes={prizes} />
-      <Info total={filteredNumbers.length} sold={soldCount} />
+      <div ref={captureRef}>
+        <Header prizes={prizes} />
+        <Info total={filteredNumbers.length} sold={soldCount} />
+        <NumberGrid numbers={filteredNumbers} loading={loading} error={error} />
+      </div>
+      <ScreenshotButton targetRef={captureRef} />
       <VendorFilter vendors={vendors} active={activeVendor} onChange={setActiveVendor} />
-      <NumberGrid numbers={filteredNumbers} loading={loading} error={error} />
       <Footer prizes={prizes} />
     </div>
   )
