@@ -8,7 +8,7 @@ export function DrawDate() {
   return (
     <div className="mx-4 mt-4">
       <div className="bg-indigo-950 rounded-2xl px-5 py-4 text-center shadow-lg">
-        <p className="text-amber-400 font-black text-lg tracking-wide mb-0">
+        <p className="text-amber-400 font-black text-base tracking-wide mb-0 whitespace-nowrap">
           FECHA DEL SORTEO: <span className="text-white">{DRAW_DATE}</span>
         </p>
       </div>

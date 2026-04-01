@@ -86,7 +86,7 @@ export default function App() {
 
   return (
     <div className="max-w-2xl mx-auto pb-8 min-h-screen">
-      <div ref={captureRef}>
+      <div ref={captureRef} className="pt-8 pb-10">
         <Header prizes={prizes} />
         <DrawDate />
         <NumberGrid numbers={filteredNumbers} loading={loading} error={error} />
