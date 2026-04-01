@@ -38,12 +38,12 @@ export default function Header({ prizes }) {
           ? prizes.map((prize, i) => (
               <div
                 key={prize.numero}
-                className="w-20 rounded-lg border-2 border-white/50 shadow-md flex flex-col items-center overflow-hidden bg-white/90"
+                className="w-[4.5rem] rounded-lg border-2 border-white/50 shadow-md flex flex-col items-center overflow-hidden bg-white/90"
               >
                 <img
                   src={PRIZE_IMAGES[i] ?? PRIZE_IMAGES[PRIZE_IMAGES.length - 1]}
                   alt={prize.palabraClave}
-                  className="w-full h-16 object-cover"
+                  className="w-full h-[3.375rem] object-cover"
                 />
                 <span className="text-[8px] text-indigo-400 font-medium mt-0.5">Foto ref.</span>
                 <span className="text-[9px] font-semibold text-indigo-900 text-center px-0.5 leading-tight pb-1">
@@ -54,7 +54,7 @@ export default function Header({ prizes }) {
           : [1, 2, 3].map((n) => (
               <div
                 key={n}
-                className="w-20 h-24 rounded-lg border-2 border-white/50 shadow-md bg-indigo-800 animate-pulse"
+                className="w-[4.5rem] h-[5.5rem] rounded-lg border-2 border-white/50 shadow-md bg-indigo-800 animate-pulse"
               />
             ))}
       </div>
