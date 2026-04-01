@@ -3,7 +3,7 @@ import Header from './components/Header'
 import Info from './components/Info'
 import NumberGrid from './components/NumberGrid'
 import VendorFilter from './components/VendorFilter'
-import Footer from './components/Footer'
+import Footer, { DrawDate } from './components/Footer'
 import ScreenshotButton from './components/ScreenshotButton'
 import './index.css'
 
@@ -88,11 +88,12 @@ export default function App() {
     <div className="max-w-2xl mx-auto pb-8 min-h-screen">
       <div ref={captureRef}>
         <Header prizes={prizes} />
-        <Info total={filteredNumbers.length} sold={soldCount} />
+        <DrawDate />
         <NumberGrid numbers={filteredNumbers} loading={loading} error={error} />
       </div>
       <ScreenshotButton targetRef={captureRef} />
       <VendorFilter vendors={vendors} active={activeVendor} onChange={setActiveVendor} />
+      <Info total={filteredNumbers.length} sold={soldCount} />
       <Footer prizes={prizes} />
     </div>
   )

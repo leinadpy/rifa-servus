@@ -4,6 +4,18 @@ const DRAW_DATE = 'DOM 04 DE MAYO'
 
 const ORDINALS = ['1er', '2do', '3er', '4to', '5to', '6to', '7mo', '8vo', '9no', '10mo']
 
+export function DrawDate() {
+  return (
+    <div className="mx-4 mt-4">
+      <div className="bg-indigo-950 rounded-2xl px-5 py-4 text-center shadow-lg">
+        <p className="text-amber-400 font-black text-lg tracking-wide mb-0">
+          FECHA DEL SORTEO: <span className="text-white">{DRAW_DATE}</span>
+        </p>
+      </div>
+    </div>
+  )
+}
+
 export default function Footer({ prizes }) {
   return (
     <footer className="mx-4 my-6">
@@ -30,12 +42,6 @@ export default function Footer({ prizes }) {
             ))}
           </ul>
         )}
-      </div>
-
-      <div className="bg-indigo-950 rounded-2xl px-5 py-4 text-center shadow-lg">
-        <p className="text-amber-400 font-black text-lg tracking-wide">
-          FECHA DEL SORTEO: <span className="text-white">{DRAW_DATE}</span>
-        </p>
       </div>
 
       <p className="text-center text-xs text-indigo-300 mt-4">

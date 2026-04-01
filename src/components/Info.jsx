@@ -6,8 +6,8 @@ const BANK_INFO = [
   { label: 'Moneda', value: 'Guaraníes (GS)' },
 ]
 
-export default function Info({ total, sold }) {
-  const available = total - sold
+export default function Info(/* { total, sold } */) {
+  // const available = total - sold
 
   return (
     <div className="bg-white/90 mx-4 mt-4 rounded-2xl shadow-sm border border-indigo-200/50 px-5 py-4">
