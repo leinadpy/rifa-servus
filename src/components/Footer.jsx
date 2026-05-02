@@ -1,6 +1,6 @@
 import { ORGANIZATION_NAME } from '../constants'
 
-const DRAW_DATE = 'DOM 04 DE MAYO'
+const DRAW_DATE = 'LUN 04 DE MAYO'
 
 const ORDINALS = ['1er', '2do', '3er', '4to', '5to', '6to', '7mo', '8vo', '9no', '10mo']
 
